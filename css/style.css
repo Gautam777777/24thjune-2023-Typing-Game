@@ -1,0 +1,18 @@
+.g_tbdr{
+    border: 1px solid #000;
+}
+
+.g_container{
+    height: 680px;
+}
+
+.g_h33{
+    height: 220px;
+}
+
+.g_image{
+    background-image: url("../img/hand1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
