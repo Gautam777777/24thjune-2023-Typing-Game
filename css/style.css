@@ -3,11 +3,11 @@
 }
 
 .g_container{
-    height: 680px;
+    height: 700px;
 }
 
 .g_h33{
-    height: 220px;
+    height: 228px;
 }
 
 .g_image{
@@ -15,4 +15,75 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom center;
+}
+
+.g_row{
+    height: 37px;
+    width: 100%;
+}
+
+.g_keyboard{
+    background: linear-gradient( #456456, #5656 , #d2f59f);
+}
+
+button{
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 35px;
+    border: none;
+    font-weight: bold;
+    background: rgba(200, 200, 200, 0.5);
+    box-shadow: 0 0 10px #111, 0 0 40px #333, 0 0 80px #888;
+    margin-left: 10px;
+    border-radius:  20%;
+}
+
+.print {
+    width: 85px;
+  border-radius: 10px;
+}
+
+.back {
+  width: 148px;
+  border-radius: 10px;
+}
+
+.tab {
+  width: 115px;
+  border-radius: 10px;
+}
+
+.slace {
+  width: 90px;
+  border: 10px;
+}
+
+.cap {
+  width: 96px;
+  border-radius: 10px;
+}
+
+.enter-btn {
+  width: 109px;
+  border-radius: 10px;
+}
+
+.shift {
+  width: 135px;
+  border-radius: 10px;
+}
+
+.last {
+    width: 50px;
+    border-radius: 10px;
+}
+ 
+.space {
+    width: 200px;
+    border-radius: 10px;
+}
+
+.g_btn:hover{
+  background: darkgreen !important;
+  color: #fff !important;
 }
