@@ -8,120 +8,142 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
+        
+        <!-- Modal -->
+        <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="registrationModalLabel">Registration Form</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                            <label for="first_name"  class="form-label">First Name</label>
+                            <input name="first_name" type="text" class="form-control" id="first_name">
+                            </div>
+                            <div class="mb-3">
+                            <label for="last_name" class="form-label">Last Name</label>
+                            <input name="last_name" type="text" class="form-control" id="last_name">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary g_save" onclick="submitRegistrationInfo()">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container g_container">
             <section class="g_section border border-dark border-5 rounded-4 h-100">
                 <div class="row m-0 h-100">
-                    <div class="col-9 p-0 bg-primary text-dark" style="background: #efffd7 !important;">
-                        <h1 class="dispaly-4 g_h33 overflow-hidden">
-                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.
+                    <div class="col-9 p-0 text-dark g_tbdr" >
+                        <h1 class="dispaly-4 g_h33 overflow-hidden g_tbdr">
+                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic.
                         </h1>
-                        <div class="g_keyboard g_h33  container">
-                            <div class="g_row g_row1">
-                                <button>Esc</button>
-                                <button>F1</button>
-                                <button>F2</button>
-                                <button>F3</button>
-                                <button>F4</button>
-                                <button>F5</button>
-                                <button>F6</button>
-                                <button>F7</button>
-                                <button>F8</button>
-                                <button>F9</button>
-                                <button>F10</button>
-                                <button>F11</button>
-                                <button>F12</button>
-                                <button>Insect</button>
-                                <button class="print">printScr</button>
-                                <button>Delete</button>
+                        <div class="container g_keyboard">
+                            <div class="g_row one">
+                                <button class="btn g_btn_btn" onclick="playSound()">~</button>
+                                <button class="btn g_1" onclick="playSound()">1</button>
+                                <button class="btn g_2" onclick="playSound()">2</button>
+                                <button class="btn g_3" onclick="playSound()">3</button>
+                                <button class="btn g_4" onclick="playSound()">4</button>
+                                <button class="btn g_5" onclick="playSound()">5</button>
+                                <button class="btn g_6" onclick="playSound()">6</button>
+                                <button class="btn g_7" onclick="playSound()">7</button>
+                                <button class="btn g_8" onclick="playSound()">8</button>
+                                <button class="btn g_9" onclick="playSound()">9</button>
+                                <button class="btn g_0" onclick="playSound()">0</button>
+                                <button class="btn g_sub" onclick="playSound()">-</button>
+                                <button class="btn g_equal" onclick="playSound()">=</button>
+                                <button class="btn g_backspace g_backspace" onclick="playSound()">Backspace</button>
                             </div>
-                            <div class="g_row g_row2">
-                                <button>~</button>
-                                <button>1</button>
-                                <button>2</button>
-                                <button>3</button>
-                                <button>4</button>
-                                <button>5</button>
-                                <button>6</button>
-                                <button>7</button>
-                                <button>8</button>
-                                <button>9</button>
-                                <button>0</button>
-                                <button>-</button>
-                                <button>=</button>
-                                <button class="back">Backspace</button>
-                                <button>Home</button>
+                            <div class="g_row two">
+                                <button class="g_tab btn" onclick="playSound()">Tab</button>
+                                <button class="btn g_q" onclick="playSound()">Q</button>
+                                <button class="btn g_w" onclick="playSound()">W</button>
+                                <button class="btn g_e" onclick="playSound()">E</button>
+                                <button class="btn g_r" onclick="playSound()">R</button>
+                                <button class="btn g_t" onclick="playSound()">T</button>
+                                <button class="btn g_y" onclick="playSound()">Y</button>
+                                <button class="btn g_u" onclick="playSound()">U</button>
+                                <button class="btn g_i" onclick="playSound()">I</button>
+                                <button class="btn g_o" onclick="playSound()">O</button>
+                                <button class="btn g_p" onclick="playSound()">P</button>
+                                <button class="btn g_array_right" onclick="playSound()">[</button>
+                                <button class="btn g_array_left" onclick="playSound()">]</button>
+                                <button class="btn g_slace" onclick="playSound()">\</button>
                             </div>
-                            <div class="g_row g_row3">
-                                <button class="tab">Tab</button>
-                                <button>Q</button>
-                                <button>W</button>
-                                <button>E</button>
-                                <button>R</button>
-                                <button>T</button>
-                                <button>Y</button>
-                                <button>U</button>
-                                <button>I</button>
-                                <button>O</button>
-                                <button>P</button>
-                                <button>{</button>
-                                <button>}</button>
-                                <button class="slace">\</button>
-                                <button>Pg Up</button>
+                            <div class="g_row three">
+                                <button class="btn g_caps" onclick="playSound()">Caps</button>
+                                <button class="btn g_a" onclick="playSound()">A</button>
+                                <button class="btn g_s" onclick="playSound()">S</button>
+                                <button class="btn g_d" onclick="playSound()">D</button>
+                                <button class="btn g_f" onclick="playSound()">F</button>
+                                <button class="btn g_g" onclick="playSound()">G</button>
+                                <button class="btn g_h" onclick="playSound()">H</button>
+                                <button class="btn g_j" onclick="playSound()">J</button>
+                                <button class="btn g_k" onclick="playSound()">K</button>
+                                <button class="btn g_l" onclick="playSound()">L</button>
+                                <button class="btn g_semi" onclick="playSound()">;</button>
+                                <button class="btn g_koma" onclick="playSound()">'</button>
+                                <button class="btn g_enter" onclick="playSound()">Enter</button>
                             </div>
-                            <div class="g_row g_row4">
-                                <button class="cap">Caps Lock</button>
-                                <button>A</button>
-                                <button>S</button>
-                                <button>D</button>
-                                <button>F</button>
-                                <button>G</button>
-                                <button>H</button>
-                                <button>I</button>
-                                <button>J</button>
-                                <button>K</button>
-                                <button>L</button>
-                                <button>;</button>
-                                <button>"</button>
-                                <button class="enter-btn">Enter</button>
-                                <button>Pg Dn</button>
+                            <div class="g_row four">
+                                <button class="btn g_shift" onclick="playSound()">Shift</button>
+                                <button class="btn g_z" onclick="playSound()">Z</button>
+                                <button class="btn g_x" onclick="playSound()">X</button>
+                                <button class="btn g_c" onclick="playSound()">C</button>
+                                <button class="btn g_v" onclick="playSound()">V</button>
+                                <button class="btn g_b" onclick="playSound()">B</button>
+                                <button class="btn g_n" onclick="playSound()">N</button>
+                                <button class="btn g_m" onclick="playSound()">M</button>
+                                <button class="btn g_smaller" onclick="playSound()">></button>
+                                <button class="btn g_smaller" onclick="playSound()">></button>
+                                <button class="btn g_question" onclick="playSound()">?</button>
+                                <button class="btn g_shift" onclick="playSound()">Shift</button>
                             </div>
-                            <div class="g_row g_row5">
-                                <button class="shift">Shift</button>
-                                <button>Z</button>
-                                <button>X</button>
-                                <button>C</button>
-                                <button>V</button>
-                                <button>B</button>
-                                <button>N</button>
-                                <button>M</button>
-                                <button> > </button>
-                                <button>></button>
-                                <button>?</button>
-                                <button class="shift">Shift</button>
-                                <button>↑</button>
-                                <button>End</button>
-                            </div>
-                            <div class="g_row g_row6">
-                                <button class="last">Ctrl</button>
-                                <button class="last">Fn</button>
-                                <button class="last">Win</button>
-                                <button class="last">Alt</button>
-                                <button class="space">space</button>
-                                <button class="last">Alt</button>
-                                <button class="last">Fn</button>
-                                <button class="last">Ctrl</button>
-                                <button class="last">←</button>
-                                <button class="last">↓</button>
-                                <button class="last">→</button>
+                            <div class="g_row five">
+                                <button class="btn g_key_other" onclick="playSound()">Ctrl</button>
+                                <button class="btn g_key_other" onclick="playSound()">Win</button>
+                                <button class="btn g_key_other" onclick="playSound()">Alt</button>
+                                <button class="btn g_space" onclick="playSound()">Space</button>
+                                <button class="btn g_key_other" onclick="playSound()">Alt</button>
+                                <button class="btn g_key_other" onclick="playSound()">Win</button>
+                                <button class="btn g_key_other" onclick="playSound()">Ctrl</button>
                             </div>
                         </div>
-                        <div class="g_h33 g_hand  g_image"></div>
+                        <div class="g_hand g_image text-center position-relative g_tbdr">
+                            <div class="rounded-circle bg-danger position-absolute g_rounded_circle g_fingers g_left_pinky left_pinky"></div>
+                            <div class="rounded-circle bg-danger position-absolute g_rounded_circle g_fingers g_left_ring left_ring"></div>
+                            <div class="rounded-circle bg-danger position-absolute g_rounded_circle g_fingers g_left_middle left_middle"></div>
+                            <div class="rounded-circle bg-danger position-absolute g_rounded_circle g_fingers g_left_index left_index"></div>
+                            <div class="rounded-circle bg-danger position-absolute g_rounded_circle g_fingers g_left_thumb left_thumb"></div>
+
+                            <div class="rounded-circle bg-danger position-absolute g_rounded_circle g_fingers g_right_thumb right_thumb"></div>
+                            <div class="rounded-circle bg-danger position-absolute g_rounded_circle g_fingers g_right_index right_index"></div>
+                            <div class="rounded-circle bg-danger position-absolute g_rounded_circle g_fingers g_right_middle right_middle"></div>
+                            <div class="rounded-circle bg-danger position-absolute g_rounded_circle g_fingers g_right_ring right_ring"></div>
+                            <div class="rounded-circle bg-danger position-absolute g_rounded_circle g_fingers g_right_pinky right_pinky"></div>
+
+                            <img class="img-fluid w-25 g_hand_image" src="./img/hand1.png" >
+                        </div>
                     </div>
-                    <div class="col-3 p-0 text-dark" style="background: #888 !important;">
+
+                    <div class="col-3 p-0 text-dark">
+                        <h5 class="mt-3 g_welcome"></h5>
                         <h3 class="mt-4 ms-4">Time</h3>
                         <h1 class="ms-3 p-2"><strong>03:00</strong></h1>
-                        <button class="btn btn-outline-success text-dark bg-primary fw-bold col-11 mt-3 g_btn">Start</button>
+                        <button class="btn btn-outline-success text-dark bg-primary fw-bold col-11 mt-3 g_btn" onclick="playSound()">Start</button>
+                           
+                        <audio controls class="g_audio invisible">
+                            <source src="./Sounds/keyboard_sound.mp3" type="audio/mpeg">
+                        </audio>
                     </div>
+                    
                 </div>
             </section>
         </div>
